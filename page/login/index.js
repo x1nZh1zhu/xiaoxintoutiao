@@ -14,7 +14,7 @@ document.querySelector('.btn').addEventListener('click', () => {
     // 登录成功后 保存token 跳转内容页面
     setTimeout(() => {
       localStorage.setItem('token', result.data.token)
-      location.href = "../content/内容.html"
+      location.href = "../content/index.html"
     }, 1500);
   }).catch(error => {
     // console.log(error.response.data.message);

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../lib/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://at.alicdn.com/t/c/font_4001111_4jrdiaeyvuy.css?spm=a313x.7781069.1998910419.52&file=font_4001111_4jrdiaeyvuy.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4283839_5wdrc9x18b.css">
+  <link rel="stylesheet" href="../../lib/bootstrap-icons.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="project">
+    <!-- 侧边栏 -->
+    <div class="aside">
+      <h2>黑马头条</h2>
+      <ul class="nav">
+        <li>
+          <a href="../content/index.html">
+            <span class="iconfont icon-16 active"></span>
+            <span class="nav-item active">内容管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="../publish/index.html">
+            <span class="iconfont icon-fabu"></span>
+            <span class="nav-item">发布文章</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 主页面 -->
+    <div class="main-page">
+      <!-- 顶部导航 -->
+      <div class="top-nav">
+        <ul class="top-nav-list">
+          <li class="item"><a href="javascript:;" class="nickname">昵称</a></li>
+          <li class="item"><a href="javascript:;" class="quit">退出</a></li>
+        </ul>
+      </div>
+      <!-- 内容区 -->
+      <div class="content">
+        <!-- 筛选区 -->
+        <div class="card">
+          <div class="card-header">
+            内容管理
+          </div>
+          <form class="select-form">
+            <ul class="list-group list-group-flush">
+              <!-- 状态 -->
+              <li class="list-group-item">
+                <label>状态:</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="" checked>
+                  <label class="form-check-label" for="inlineRadio1">全部</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="1">
+                  <label class="form-check-label" for="inlineRadio2">待审核</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio3" value="2">
+                  <label class="form-check-label" for="inlineRadio3">审核通过</label>
+                </div>
+              </li>
+              <!-- 频道 -->
+              <li class="list-group-item">
+                <label>频道:</label>
+                <select class="form-select" aria-label="Default select example" name="channel_id">
+                  <option selected value="none">请选择文章频道</option>
+                  <option value="1">频道一</option>
+                  <option value="2">频道二</option>
+                  <option value="3">频道三</option>
+                </select>
+            </ul>
+            <!-- 按钮 -->
+            <button type="button" class="btn btn-primary ">筛选</button>
+          </form>
+        </div>
+        <!-- 内容列表 -->
+        <div class="card">
+          <div class="card-body">
+            <!-- 表格内容 -->
+            <table class="table table-striped">
+              <thead>
+                <tr class="title">
+                  <td>封面</td>
+                  <td>标题</td>
+                  <td>状态</td>
+                  <td>发布时间</td>
+                  <td>阅读数</td>
+                  <td>评论数</td>
+                  <td>点赞数</td>
+                  <td>操作</td>
+                </tr>
+              </thead>
+              <tbody class="art-list">
+                <tr>
+                  <td>
+                    <img
+                      src="https://img2.baidu.com/it/u=2640406343,1419332367&fm=253&fmt=auto&app=138&f=JPEG?w=708&h=500"
+                      alt="">
+                  </td>
+                  <td class="con-title">文章标题</td>
+                  <td>
+                    <span class="badge text-bg-success">审核通过</span>
+                    <span class="badge text-bg-primary">待审核</span>
+                  </td>
+                  <td>2023年10月12日15:29:03</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>
+                    <i class="iconfont icon-wenbenshuru edit"></i>
+                    <i class="iconfont icon-shanchu del"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 分页 -->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link Previous" href="javascript:;" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item page-now">第1页</li>
+                <li class="page-item">
+                  <a class="page-link next" href="javascript:;" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="total-count page-now">共0条</li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="../../lib/form-serialize.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.min.js"></script>
+  <script src="../../utils/requst.js"></script>
+  <script src="../../utils/auth.js"></script>
+  <script src="../../lib/bootstrap.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
