@@ -28,7 +28,7 @@ axios.interceptors.response.use(function (response) {
   if (error?.response?.status === 401) {
     alert('用户登录身份过期')
     localStorage.removeItem('token')
-    location.href = '../login/登录.html'
+    location.href = '../login/index.html'
   }
   return Promise.reject(error);
 });

@@ -2,7 +2,7 @@
 const token = localStorage.getItem('token')
 // 如果没有token 则返回登录页面
 if (!token) {
-  location.href = "../login/登录.html"
+  location.href = "../login/index.html"
 
 }
 
@@ -19,5 +19,5 @@ axios({
 document.querySelector('.quit').addEventListener('click', () => {
 
   localStorage.removeItem('token')
-  location.href = '../login/登录.html'
+  location.href = '../login/index.html'
 })
