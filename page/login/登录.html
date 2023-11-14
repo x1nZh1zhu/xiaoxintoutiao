@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../lib/bootstrap.min.css">
+  <link rel="stylesheet" href="./登录.css">
+</head>
+
+<body>
+  <!-- 提示框 -->
+  <div class="alert alert-success" role="alert">
+    操作
+  </div>
+  <!-- 登录 -->
+  <div class="login">
+    <div class="title">黑马头条</div>
+    <form class="login-form">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="请输入手机号" name="mobile">
+        <label for="floatingInput">账号/手机号</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="验证码" name="code">
+        <label for="floatingPassword">验证码(246810)</label>
+      </div>
+      <button type="reset" class="btn btn-primary">登录</button>
+    </form>
+
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.min.js"></script>
+  <script src="../../lib/form-serialize.js"></script>
+  <script src="../../lib/bootstrap.min.js"></script>
+  <script src="../../utils/requst.js"></script>
+  <script src="../../utils/alert.js"></script>
+  <script src="./登录.js"></script>
+</body>
+
+</html>
